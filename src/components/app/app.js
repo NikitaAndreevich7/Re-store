@@ -1,19 +1,25 @@
 import React from 'react';
-import ErrorIndicator from '../error-indicator';
-import Spinner from '../spinner';
-import { withBookstoreService } from '../hoc'
+import { Route, Switch } from 'react-router-dom';
+import { HomePage, CartPage } from '../pages';
+
 import './app.css';
 
-const App  = ({ bookstoreService }) =>{
+const App  = () =>{
     
-    console.log(bookstoreService.getBooks())
-
     return(
         <div>
-            <ErrorIndicator/>
-            <Spinner/>
+            <Switch>
+                <Route
+                    path='/'
+                    component={HomePage}
+                    exact />
+                    
+                <Route
+                    path='/cart'
+                    component={CartPage} />
+            </Switch>
         </div>
     )
 }
 
-export default withBookstoreService()(App);
+export default (App);
