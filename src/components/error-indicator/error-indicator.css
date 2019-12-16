@@ -1,0 +1,21 @@
+.error-indicator{
+    width:50%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.img-error{
+    width:50%;
+    max-width:200px;
+    align-self:center;
+}
+.error-text{
+    color: #003153;
+}
+.error-text span{
+    color:tomato;
+}
+.error-details{
+    color:silver;
+}
